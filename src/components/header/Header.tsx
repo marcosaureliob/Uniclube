@@ -10,7 +10,10 @@ export default function Header() {
           <img src={Logo} className="h-9 w-auto" />
         </div>
         <div>
-          <input className="w-[572px] h-14 rounded-full px-5 py-3" placeholder="O que você gostaria de ver hoje?"></input>
+          <input
+            className="w-[572px] h-14 rounded-full px-5 py-3"
+            placeholder="O que você gostaria de ver hoje?"
+          ></input>
         </div>
         <div className="flex gap-7">
           <div className="flex gap-1 items-center">
@@ -36,7 +39,6 @@ export default function Header() {
             </p>
           </div>
           <div className="flex gap-1 items-center">
-
             <div className="p-1 bg-[#F7F3EE] rounded-full">
               <ShoppingCart className="text-[#f47920] " size={19} />
             </div>
@@ -48,6 +50,5 @@ export default function Header() {
         </div>
       </div>
     </div>
-
   );
 }
