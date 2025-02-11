@@ -1,9 +1,10 @@
 import './App.css'
+import Header from './components/header/Header'
 
 function App() {
   return (
-    <div className='bg-red-50 text-center'>
-      Uniclube
+    <div>
+      <Header />
     </div>
   )
 }
