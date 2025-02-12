@@ -29,9 +29,9 @@ const categories = [
   { name: "Casa, Móveis e Decoração", icon: couch, whiteIcon: whiteCouch },
   { name: "Esportes e Fitness", icon: dumbell, whiteIcon: whiteDumbell },
   { name: "Beleza e Cuidado Pessoal", icon: mirror, whiteIcon: whiteMirror },
+  { name: "Serviços", icon: ticket, whiteIcon: whiteTicket },
   { name: "Imóveis", icon: key, whiteIcon: whiteKey },
   { name: "Óculos", icon: glass, whiteIcon: whiteGlass },
-  { name: "Serviços", icon: ticket, whiteIcon: whiteTicket },
 ];
 
 export default function Categories() {
