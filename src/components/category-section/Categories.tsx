@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import book from "../../assets/categories/Book.svg";
 import heart from "../../assets/categories/heart.svg";
 import shirt from "../../assets/categories/shirt.svg";
@@ -8,110 +10,52 @@ import mirror from "../../assets/categories/mirror.svg";
 import key from "../../assets/categories/key.svg";
 import glass from "../../assets/categories/glasses.svg";
 import ticket from "../../assets/categories/ticket.svg";
+import whiteBook from "../../assets/categories/white-book.svg";
+import whiteHeart from "../../assets/categories/white-heart.svg";
+import whiteShirt from "../../assets/categories/white-shirt.svg";
+import whiteBaby from "../../assets/categories/white-baby.svg";
+import whiteCouch from "../../assets/categories/white-couch.svg";
+import whiteDumbell from "../../assets/categories/white-dumbell.svg";
+import whiteMirror from "../../assets/categories/white-mirror.svg";
+import whiteKey from "../../assets/categories/white-key.svg";
+import whiteGlass from "../../assets/categories/white-glasses.svg";
+import whiteTicket from "../../assets/categories/white-ticket.svg";
+
+const categories = [
+  { name: "Arte, Papelaria e Armarinhos", icon: book, whiteIcon: whiteBook },
+  { name: "Saúde", icon: heart, whiteIcon: whiteHeart },
+  { name: "Calçados, Roupas e Bolsas", icon: shirt, whiteIcon: whiteShirt },
+  { name: "Bebês", icon: baby, whiteIcon: whiteBaby },
+  { name: "Casa, Móveis e Decoração", icon: couch, whiteIcon: whiteCouch },
+  { name: "Esportes e Fitness", icon: dumbell, whiteIcon: whiteDumbell },
+  { name: "Beleza e Cuidado Pessoal", icon: mirror, whiteIcon: whiteMirror },
+  { name: "Imóveis", icon: key, whiteIcon: whiteKey },
+  { name: "Óculos", icon: glass, whiteIcon: whiteGlass },
+  { name: "Serviços", icon: ticket, whiteIcon: whiteTicket },
+];
 
 export default function Categories() {
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
   return (
-    <div className="flex justify-center  gap-4 mt-2 mb-16">
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={book} color="white" />
+    <div className="flex justify-center gap-4 mt-2 mb-16 flex-wrap">
+      {categories.map((category, index) => (
+        <div className="flex flex-col gap-2 items-center">
+          <div
+            key={index}
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
+            className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center transition-all duration-300 hover:bg-orange-500"
+          >
+            <img
+              src={hoverIndex === index ? category.whiteIcon : category.icon}
+              alt={category.name}
+              className="w-10 h-10"
+            />
+          </div>
+          <p className="text-center text-[#737373]">{category.name}</p>
         </div>
-        <div>
-          <p className="text-center text-[#737373]">
-            Arte, Papelaria e <br /> Armarinhos
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={heart} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">Saúde</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={shirt} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">
-            Calçados,
-            <br /> Roupas e Bolsas
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={baby} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">Bebês</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={couch} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">
-            Casa, Móveis e<br /> Decoração
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={dumbell} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">
-            Esportes e<br /> Fitness
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={mirror} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">
-            Beleza e<br /> Cuidado Pessoal
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={key} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">Imóveis</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={glass} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">Óculos</p>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 items-center">
-        <div className="bg-[#EAE0D5] p-2 w-24 rounded-full h-24 flex justify-center items-center">
-          <img src={ticket} color="white" />
-        </div>
-        <div>
-          <p className="text-center text-[#737373]">Serviços</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
