@@ -4,7 +4,7 @@ export default function Discount() {
   return (
     <div className="flex justify-center">
       <div
-        className=" w-[1196px] h-[530px] mt-36 mb-7 py-10 px-12"
+        className=" w-[1196px] h-[530px] mt-20 mb-20 py-10 px-12"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="mb-8">

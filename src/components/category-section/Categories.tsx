@@ -38,7 +38,7 @@ export default function Categories() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex justify-center gap-4 mt-2 mb-16 flex-wrap">
+    <div className="flex justify-center gap-4 mt-2  flex-wrap">
       {categories.map((category, index) => (
         <div className="flex flex-col gap-2 items-center">
           <div
