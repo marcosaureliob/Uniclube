@@ -117,7 +117,7 @@ export default function DropDownMenu() {
           </p>
         </div>
       </div>
-      <div className="flex bg-[#faf7f4] p-10 gap-6 rounded-b-lg">
+      <div className="flex mt-9 bg-[#faf7f4] p-10 gap-6 rounded-b-lg">
         <div className="flex flex-col gap-2 items-center">
           <img src={elipse} />
           <p className="text-[#737373] text-[18px]">
