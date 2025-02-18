@@ -17,14 +17,14 @@ Tecnologias utilizadas
 # Como iniciar o projeto?
 
 1. Clonar o repositório
- git clone https://github.com/seu-usuario/uniclube.git
- cd uniclube
+ - git clone https://github.com/seu-usuario/uniclube.git
+ - cd uniclube
 
 2. Instalar as dependências
-npm install
+ - npm install
 
 3. Rodar o ambiente de desenvolvimento
-npm run dev
+ - npm run dev
 
 Contribuição
 
