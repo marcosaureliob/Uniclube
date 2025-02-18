@@ -1,7 +1,7 @@
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 import banner from "../../assets/banner.svg";
 import secondBanner from "../../assets/second-banner.svg";
-import { useEffect, useState } from "react";
 
 export default function Banner() {
   const banners = [banner, secondBanner];
@@ -27,31 +27,33 @@ export default function Banner() {
   };
 
   return (
-    <div
-      className="flex justify-center items-center my-8"
-      onMouseEnter={() => setShowButtons(true)}
-      onMouseLeave={() => setShowButtons(false)}
-    >
-      <button
-        onClick={handlePrev}
-        className={`bg-[#F47920] z-10 text-white h-16 w-7 rounded-3xl flex items-center justify-center transition-opacity duration-300 ${
-          showButtons ? "opacity-100" : "opacity-0"
-        }`}
+    <div className="container mx-auto xl:max-w-[80rem] px-8">
+      <div
+        className="flex justify-center items-center my-8 max-sm:my-4"
+        onMouseEnter={() => setShowButtons(true)}
+        onMouseLeave={() => setShowButtons(false)}
       >
-        <CaretLeft size={19} className="font-bold" />
-      </button>
-      <img
-        className="mx-[-15px] z-0 transition-opacity duration-500"
-        src={banners[currentIndex]}
-      />
-      <button
-        onClick={handleNext}
-        className={`bg-[#F47920] z-10 text-white h-16 w-7 rounded-3xl flex items-center justify-center transition-opacity duration-300 ${
-          showButtons ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <CaretRight size={19} className="font-bold" />
-      </button>
+        <button
+          onClick={handlePrev}
+          className={`bg-[#F47920] z-10 text-white h-16 w-7 rounded-3xl flex items-center justify-center transition-opacity duration-300 ${
+            showButtons ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <CaretLeft size={19} className="font-bold" />
+        </button>
+        <img
+          className="w-full z-0 transition-opacity duration-500"
+          src={banners[currentIndex]}
+        />
+        <button
+          onClick={handleNext}
+          className={`bg-[#F47920] z-10 text-white h-16 w-7 rounded-3xl flex items-center justify-center transition-opacity duration-300 ${
+            showButtons ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <CaretRight size={19} className="font-bold" />
+        </button>
+      </div>
     </div>
   );
 }
