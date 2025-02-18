@@ -8,9 +8,9 @@ export default function SubMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <div className="flex justify-between items-center bg-[#F7F3EE] py-4 px-32 gap-7">
-        <div className="flex gap-6">
+    <div className="bg-[#F7F3EE]">
+      <div className="flex justify-between items-center py-4 gap-7 container px-8 mx-auto xl:max-w-[80rem] max-sm:flex-col">
+        <div className="flex gap-6 max-sm:flex-col max-sm:items-center">
           <div
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}

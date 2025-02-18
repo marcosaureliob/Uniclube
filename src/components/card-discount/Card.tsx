@@ -1,15 +1,15 @@
-import garrafa from "../../assets/card-banners/garrafa.svg";
 import bolsa from "../../assets/card-banners/bolsa.svg";
-import galinha from "../../assets/card-banners/galinha.svg";
-import vaso from "../../assets/card-banners/vaso.svg";
 import boneca from "../../assets/card-banners/boneca.svg";
+import galinha from "../../assets/card-banners/galinha.svg";
+import garrafa from "../../assets/card-banners/garrafa.svg";
+import vaso from "../../assets/card-banners/vaso.svg";
 
 import heart from "../../assets/card-banners/wishlist.svg";
 
 export default function Card() {
   return (
-    <div className="flex gap-4">
-      <div>
+    <>
+      <div className="mx-auto">
         <div
           className="w-52 h-48 rounded-t-md flex justify-end items-end p-3"
           style={{ backgroundImage: `url(${garrafa})` }}
@@ -41,7 +41,7 @@ export default function Card() {
         </div>
       </div>
 
-      <div>
+      <div className="mx-auto">
         <div
           className="w-52 h-48 rounded-t-md flex justify-end items-end p-3"
           style={{ backgroundImage: `url(${bolsa})` }}
@@ -72,7 +72,7 @@ export default function Card() {
         </div>
       </div>
 
-      <div>
+      <div className="mx-auto">
         <div
           className="w-52 h-48 rounded-t-md flex justify-end items-end p-3"
           style={{ backgroundImage: `url(${galinha})` }}
@@ -101,7 +101,7 @@ export default function Card() {
         </div>
       </div>
 
-      <div>
+      <div className="mx-auto">
         <div
           className="w-52 h-48 rounded-t-md flex justify-end items-end p-3"
           style={{ backgroundImage: `url(${vaso})` }}
@@ -130,7 +130,7 @@ export default function Card() {
         </div>
       </div>
 
-      <div>
+      <div className="mx-auto">
         <div
           className="w-52 h-48 rounded-t-md flex justify-end items-end p-3"
           style={{ backgroundImage: `url(${boneca})` }}
@@ -159,6 +159,6 @@ export default function Card() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
